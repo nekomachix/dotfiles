@@ -1,0 +1,14 @@
+name: Scaffold validation
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate repository and portable tests
+        run: |
+          python3 scripts/dotctl validate
+          python3 -m unittest discover -s tests -v
+          bash -n install.sh

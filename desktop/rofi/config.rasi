@@ -1,0 +1,3 @@
+configuration { show-icons: true; }
+@theme "default"
+@import "../dotfiles/theme/current/colors.rasi"

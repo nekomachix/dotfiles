@@ -1,0 +1,41 @@
+{
+  "profiles": {
+    "minimal": [
+      "base",
+      "desktop",
+      "infrastructure"
+    ],
+    "daily": [
+      "base",
+      "desktop",
+      "infrastructure",
+      "daily",
+      "previews"
+    ],
+    "gaming": [
+      "base",
+      "desktop",
+      "infrastructure",
+      "daily",
+      "previews",
+      "gaming"
+    ],
+    "development": [
+      "base",
+      "desktop",
+      "infrastructure",
+      "daily",
+      "previews",
+      "dev-extra"
+    ]
+  },
+  "optional_groups": [
+    "bluetooth",
+    "clipboard-extra",
+    "display-extra",
+    "gaming-extra",
+    "dev-extra",
+    "appearance",
+    "diagnostics"
+  ]
+}

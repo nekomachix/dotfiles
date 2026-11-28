@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Local music
+Type=Application
+Exec=systemctl --user start --no-block dotfiles-action@music.service
+Categories=AudioVideo;Audio;Music;

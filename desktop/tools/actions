@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+"""Interactive actions launched inside Mango by the session's systemd manager."""
+from datetime import datetime
+import os
+import shlex
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
+
+# The Wayland owner outlives the picker and stops with the Mango target.
+COPY_COMMAND = (
+    "/usr/bin/systemd-run", "--user", "--scope", "--quiet", "--collect",
+    "--property=PartOf=wayland-session@mango.desktop.target", "/usr/bin/wl-copy",
+)
+
+
+def run(*argv, **kwargs):
+    return subprocess.run(argv, check=True, **kwargs)
+
+
+def choose(prompt, entries):
+    picker = subprocess.run(["rofi", "-dmenu", "-no-custom", "-p", prompt],
+                            input=entries, stdout=subprocess.PIPE)
+    return picker.stdout.rstrip(b"\n") if picker.returncode == 0 else b""
+
+
+def capture(region):
+    args = ["grim"]
+    if region:
+        selection = subprocess.run(["slurp"], capture_output=True, text=True)
+        if selection.returncode or not selection.stdout.strip():
+            return
+        args += ["-g", selection.stdout.strip()]
+    with tempfile.TemporaryDirectory(dir=os.environ["XDG_RUNTIME_DIR"]) as temp:
+        image = Path(temp) / "capture.png"
+        run(*args, image)
+        result = subprocess.run(["xdg-user-dir", "PICTURES"], check=True, capture_output=True, text=True)
+        pictures = Path(result.stdout.strip())
+        if not pictures.is_absolute():
+            raise ValueError("Pictures path must be absolute")
+        output = pictures / "Screenshots"
+        output.mkdir(mode=0o700, parents=True, exist_ok=True)
+        name = datetime.now().strftime("Screenshot-%Y%m%d-%H%M%S-%f.png")
+        run("satty", "--filename", image, "--output-filename", output / name,
+            "--copy-command", shlex.join(COPY_COMMAND))
+
+
+def power():
+    lock = ("systemctl", "--user", "start", "dotfiles-lock.service")
+    choices = {b"Lock": lock, b"Suspend": ["systemctl", "suspend"],
+               b"Log out": ["uwsm", "stop"], b"Power off": ["systemctl", "poweroff"],
+               b"Restart": ["systemctl", "reboot"]}
+    action = choose("Power", b"\n".join(choices))
+    if action not in choices:
+        return
+    if action != b"Lock" and choose("Confirm", b"Cancel\n" + action) != action:
+        return
+    if action == b"Suspend":
+        run(*lock)
+        run("systemctl", "--user", "is-active", "--quiet", "dotfiles-lock.service")
+    run(*choices[action])
+
+
+def history():
+    active = subprocess.run(["systemctl", "--user", "is-active", "--quiet", "dotfiles-history.service"])
+    if active.returncode:
+        return
+    entries = run("cliphist", "list", stdout=subprocess.PIPE).stdout
+    selected = choose("Clipboard", entries)
+    if selected and selected in entries.splitlines():
+        data = run("cliphist", "decode", input=selected, stdout=subprocess.PIPE).stdout
+        run(*COPY_COMMAND, input=data)
+
+
+def main(action):
+    if action in ("region", "screen"):
+        capture(action == "region")
+    elif action == "music":
+        run("systemctl", "--user", "start", "mpd.service", "mpd-mpris.service")
+        run("kitty", "rmpc", env={**os.environ, "MPD_HOST": "127.0.0.1", "MPD_PORT": "6600"})
+    elif action == "power":
+        power()
+    elif action == "history":
+        history()
+    else:
+        raise ValueError("Unknown desktop action")
+
+
+if __name__ == "__main__":
+    main(sys.argv[1])

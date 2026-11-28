@@ -1,0 +1,3 @@
+# Profiles
+
+These are installation planning profiles, not active runtime modes. `minimal` omits daily apps; it is a dependency baseline, not a fully configured daily desktop. `daily` includes all selected core applications; `gaming` adds Steam and gaming tools; `development` adds CLI tooling. Optional groups may be added with repeated `--with GROUP` flags. Example: `./install.sh --profile gaming --with bluetooth --with diagnostics`. Choosing a group does not enable its services. In Mango, Super+Shift+C toggles gaming DND. Steam, recording, editors and music remain independently controlled by the user.

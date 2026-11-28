@@ -1,0 +1,21 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": [
+    "mango/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "wireplumber",
+    "network",
+    "tray"
+  ],
+  "clock": {
+    "format": "{:%H:%M}"
+  },
+  "network": {
+    "interval": 15
+  }
+}

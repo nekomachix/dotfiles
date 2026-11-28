@@ -1,0 +1,7 @@
+# gaming — candidate package names; verify with host pacman metadata
+cachyos-gaming-meta
+steam
+proton-cachyos-slr
+mangohud
+gpu-screen-recorder
+amdgpu_top

@@ -1,0 +1,18 @@
+# daily — candidate package names; verify with host pacman metadata
+kitty
+fish
+starship
+yazi
+thunar
+neovim
+zed
+firefox
+mpd
+rmpc
+mpd-mpris
+mpv
+swayimg
+zathura
+zathura-pdf-mupdf
+btop
+keepassxc

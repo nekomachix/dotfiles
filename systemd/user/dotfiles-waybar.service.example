@@ -1,0 +1,10 @@
+[Unit]
+Description=Waybar for managed graphical session (review only)
+PartOf=graphical-session.target
+After=graphical-session-pre.target
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/waybar
+Restart=on-failure
+RestartSec=3s

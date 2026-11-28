@@ -1,0 +1,134 @@
+{
+  "mango/config.conf": [
+    "config",
+    "mango/config.conf"
+  ],
+  "waybar/config.jsonc": [
+    "config",
+    "waybar/config.jsonc"
+  ],
+  "waybar/style.css": [
+    "config",
+    "waybar/style.css"
+  ],
+  "rofi/config.rasi": [
+    "config",
+    "rofi/config.rasi"
+  ],
+  "kitty/fish.conf": [
+    "config",
+    "kitty/fish.conf"
+  ],
+  "kitty/kitty.conf": [
+    "config",
+    "kitty/kitty.conf"
+  ],
+  "mpd/mpd.conf": [
+    "config",
+    "mpd/mpd.conf"
+  ],
+  "systemd/dotfiles-action@.service": [
+    "config",
+    "systemd/user/dotfiles-action@.service"
+  ],
+  "systemd/dotfiles-history.service": [
+    "config",
+    "systemd/user/dotfiles-history.service"
+  ],
+  "systemd/dotfiles-idle.service": [
+    "config",
+    "systemd/user/dotfiles-idle.service"
+  ],
+  "systemd/dotfiles-mount.service": [
+    "config",
+    "systemd/user/dotfiles-mount.service"
+  ],
+  "systemd/dotfiles-osd.service": [
+    "config",
+    "systemd/user/dotfiles-osd.service"
+  ],
+  "systemd/dotfiles-polkit.service": [
+    "config",
+    "systemd/user/dotfiles-polkit.service"
+  ],
+  "systemd/dotfiles-wallpaper.service": [
+    "config",
+    "systemd/user/dotfiles-wallpaper.service"
+  ],
+  "theme/fallback.json": [
+    "config",
+    "dotfiles/theme/fallback.json"
+  ],
+  "theme/matugen.toml": [
+    "config",
+    "dotfiles/theme/matugen.toml"
+  ],
+  "theme/tool": [
+    "config",
+    "dotfiles/theme/tool"
+  ],
+  "tools/actions": [
+    "config",
+    "dotfiles/actions"
+  ],
+  "tools/session": [
+    "config",
+    "dotfiles/session"
+  ],
+  "fish/dotfiles.fish": [
+    "config",
+    "fish/conf.d/dotfiles.fish"
+  ],
+  "waybar/notifications.css": [
+    "config",
+    "swaync/style.css"
+  ],
+  "systemd/session.conf": [
+    "config",
+    "systemd/user/wayland-session@mango.desktop.target.d/desktop.conf"
+  ],
+  "mpd/socket.conf": [
+    "config",
+    "systemd/user/mpd.socket.d/local.conf"
+  ],
+  "mpd/bridge.conf": [
+    "config",
+    "systemd/user/mpd-mpris.service.d/local.conf"
+  ],
+  "apps/starship.toml": [
+    "config",
+    "starship.toml"
+  ],
+  "apps/mpv.conf": [
+    "config",
+    "mpv/mpv.conf"
+  ],
+  "apps/MangoHud.conf": [
+    "config",
+    "MangoHud/MangoHud.conf"
+  ],
+  "apps/zathurarc": [
+    "config",
+    "zathura/zathurarc"
+  ],
+  "apps/music.desktop": [
+    "data",
+    "applications/dotfiles-music.desktop"
+  ],
+  "apps/mimeapps.list": [
+    "config",
+    "mango-mimeapps.list"
+  ],
+  "mpd/service.conf": [
+    "config",
+    "systemd/user/mpd.service.d/desktop.conf"
+  ],
+  "systemd/dotfiles-lock.service": [
+    "config",
+    "systemd/user/dotfiles-lock.service"
+  ],
+  "tools/swayidle.conf": [
+    "config",
+    "dotfiles/swayidle.conf"
+  ]
+}

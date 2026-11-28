@@ -1,0 +1,6 @@
+[Default Applications]
+inode/directory=thunar.desktop;
+application/pdf=org.pwmt.zathura.desktop;
+image/png=swayimg.desktop;
+image/jpeg=swayimg.desktop;
+video/mp4=mpv.desktop;

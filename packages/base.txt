@@ -1,0 +1,7 @@
+# base — candidate package names; verify with host pacman metadata
+bash
+python
+git
+stow
+xdg-utils
+xdg-user-dirs

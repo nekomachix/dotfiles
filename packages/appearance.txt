@@ -1,0 +1,5 @@
+# appearance — candidate package names; verify with host pacman metadata
+nwg-look
+qt6ct
+ttf-jetbrains-mono-nerd
+papirus-icon-theme

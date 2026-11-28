@@ -1,0 +1,7 @@
+/* Illustrative static fallback; future adapter emits the same role names. */
+@define-color background #14131c;
+@define-color surface #22212c;
+@define-color foreground #dedbe8;
+@define-color accent #c5afe9;
+@define-color on_accent #14131c;
+@define-color error #ffb4ab;

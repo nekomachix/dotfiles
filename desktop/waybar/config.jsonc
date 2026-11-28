@@ -1,0 +1,9 @@
+{
+  "layer": "top",
+  "modules-left": ["mango/workspaces", "mango/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["wireplumber", "network", "tray"],
+  "wireplumber": {"on-click": "pavucontrol"},
+  "network": {"interval": 15, "on-click": "kitty nmtui"},
+  "clock": {"format": "{:%H:%M}", "interval": 60}
+}

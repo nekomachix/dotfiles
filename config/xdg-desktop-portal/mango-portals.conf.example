@@ -1,0 +1,8 @@
+# Candidate following MangoWM docs. Prefer the installed packaged config.
+# Verify Secret and Inhibit interface behavior on host before using.
+[preferred]
+default=gtk
+org.freedesktop.impl.portal.ScreenCast=wlr
+org.freedesktop.impl.portal.Screenshot=wlr
+org.freedesktop.impl.portal.Secret=gnome-keyring
+org.freedesktop.impl.portal.Inhibit=none

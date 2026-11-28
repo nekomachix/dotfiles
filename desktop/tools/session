@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+if [ "$(tty)" != /dev/tty1 ] || [ -n "${SSH_CONNECTION:-}${SSH_TTY:-}${WAYLAND_DISPLAY:-}${DISPLAY:-}" ]; then
+    echo "Start from an authenticated tty1 login." >&2
+    exit 1
+fi
+uwsm check may-start -i -g 0 -v
+config_dir=${XDG_CONFIG_HOME:-"$HOME/.config"}
+mango -c "$config_dir/mango/config.conf" -p
+"$config_dir/dotfiles/theme/tool" init
+exec uwsm start mango.desktop

@@ -1,0 +1,2 @@
+# gaming-extra — candidate package names; verify with host pacman metadata
+gamescope

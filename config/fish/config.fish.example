@@ -1,0 +1,6 @@
+# Integrate with (do not duplicate) existing CachyOS startup.
+if status is-interactive
+    if type -q starship
+        starship init fish | source
+    end
+end

@@ -1,0 +1,3 @@
+# Keep OSC enabled until UOSC has been reviewed and installed.
+vo=gpu-next
+hwdec=auto-safe

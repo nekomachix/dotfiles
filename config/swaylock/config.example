@@ -1,0 +1,5 @@
+# Conservative solid-color fallback. Verify with installed swaylock.
+color=14131c
+inside-color=22212c
+ring-color=c5afe9
+key-hl-color=acd1b4

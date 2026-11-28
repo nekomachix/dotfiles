@@ -1,0 +1,9 @@
+[Unit]
+Description=Idle handling for managed graphical session (review only)
+PartOf=graphical-session.target
+After=graphical-session-pre.target
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/swayidle -w timeout 600 '/usr/bin/swaylock -f' before-sleep '/usr/bin/swaylock -f' lock '/usr/bin/swaylock -f'
+Restart=no

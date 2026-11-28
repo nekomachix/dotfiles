@@ -1,0 +1,2 @@
+# session-candidate — candidate package names; verify with host pacman metadata
+uwsm

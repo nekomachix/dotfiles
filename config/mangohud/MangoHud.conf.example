@@ -1,0 +1,7 @@
+# Enable per game, not globally. Configure logging separately for benchmark.
+fps
+frametime
+gpu_stats
+cpu_stats
+vram
+ram

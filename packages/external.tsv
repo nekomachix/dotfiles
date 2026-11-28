@@ -1,0 +1,5 @@
+component	upstream	policy
+UOSC	https://github.com/tomasklaen/uosc	Reviewed stable release or repository package; no auto download
+Yapfast	https://github.com/yapfast/yapfast	Experimental explicit opt-in; no credential automation
+Inter font	https://rsms.me/inter/	Prefer repository package after metadata check
+Bibata cursor	https://github.com/ful1e5/Bibata_Cursor	Optional; verify source and license

@@ -1,0 +1,5 @@
+// Candidate; check installed native Wayland Rofi version.
+configuration { modi: "drun,run"; show-icons: true; }
+* { font: "Inter 12"; background-color: #14131c; text-color: #dedbe8; }
+window { width: 45%; border-radius: 10px; padding: 12px; }
+element selected { background-color: #c5afe9; text-color: #14131c; }

@@ -1,0 +1,13 @@
+# dev-extra — candidate package names; verify with host pacman metadata
+fzf
+fd
+ripgrep
+bat
+eza
+zoxide
+lazygit
+github-cli
+jq
+just
+shellcheck
+shfmt

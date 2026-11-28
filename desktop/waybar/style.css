@@ -1,0 +1,5 @@
+@import "../dotfiles/theme/current/palette.css";
+* { font-family: Inter, sans-serif; font-size: 13px; }
+window#waybar { background: @desktop_bg; color: @desktop_fg; }
+#clock, #network, #wireplumber, #tray, #window { padding: 0 8px; }
+#workspaces button.active { background: @desktop_accent; color: @desktop_on_accent; }

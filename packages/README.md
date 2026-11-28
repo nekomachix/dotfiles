@@ -1,0 +1,3 @@
+# Package manifests
+
+One candidate Pacman package per line; comments begin with `#`. Profiles compose groups with stable deduplication. Names are not version pins or guaranteed present on every CachyOS mirror. `dotctl doctor` uses the host's existing sync database (`pacman -Si`) without refreshing it. `native-audit.txt` is inspection-only; `external.tsv` is a manually reviewed artifact catalog, never installed automatically. Optional groups are only included when a profile explicitly selects them. No `-git` fallbacks. Review package dependency transactions, conflicts and source priority before manually running the printed command.

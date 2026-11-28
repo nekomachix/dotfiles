@@ -1,0 +1,6 @@
+/* Candidate static styling; verify modules and theme import on host. */
+* { font-family: Inter, sans-serif; font-size: 13px; }
+window#waybar { background: #14131c; color: #dedbe8; }
+#clock, #wireplumber, #network, #tray { padding: 0 10px; }
+#workspaces button { padding: 0 8px; color: #dedbe8; }
+#workspaces button.active { background: #c5afe9; color: #14131c; }

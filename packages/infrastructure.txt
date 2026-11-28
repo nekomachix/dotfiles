@@ -1,0 +1,14 @@
+# infrastructure — candidate package names; verify with host pacman metadata
+networkmanager
+pipewire
+wireplumber
+pipewire-pulse
+pipewire-alsa
+polkit
+mate-polkit
+gnome-keyring
+udisks2
+udiskie
+gvfs
+pavucontrol
+playerctl

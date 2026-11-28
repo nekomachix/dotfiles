@@ -1,0 +1,12 @@
+[Unit]
+Description=Mango session lock
+PartOf=wayland-session@mango.desktop.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+Type=forking
+ExecCondition=/lib/systemd/systemd-xdg-autostart-condition mango ""
+ExecStart=/usr/bin/swaylock -f --color 14131c
+TimeoutStartSec=5s
+Restart=no

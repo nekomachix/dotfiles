@@ -1,0 +1,4 @@
+# display-extra — candidate package names; verify with host pacman metadata
+wlr-randr
+wlopm
+wlsunset
